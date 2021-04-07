@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 # 将依赖定义文件拷贝到工作目录下
 COPY package*.json ./
 # 以 production 形式安装依赖
-RUN yarn install --only=production
+RUN yarn install --production
 # 打包
 RUN yarn build
 # 将本地代码复制到工作目录内
